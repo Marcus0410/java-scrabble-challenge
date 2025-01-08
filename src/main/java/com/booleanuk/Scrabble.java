@@ -1,6 +1,5 @@
 package com.booleanuk;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -81,7 +80,7 @@ public class Scrabble {
                 if ((c == '}' && brackets.peek() == '{') || (c == ']' && brackets.peek() == '[')) {
                     brackets.pop();
 
-                    // return false if brackets contain more than one letter (if not the whole word)
+                    // return false if brackets contain more than one letter and is not a word multiplier
                     if (lettersInBrackets > 1 && lettersInBrackets < totalLetters)
                         return false;
 
