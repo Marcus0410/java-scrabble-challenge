@@ -85,6 +85,7 @@ public class Scrabble {
                     if (lettersInBrackets > 1 && lettersInBrackets < totalLetters)
                         return false;
 
+                    totalLetters -= lettersInBrackets;
                     lettersInBrackets = 0;
                 } else {
                     return false;
